@@ -166,5 +166,80 @@ namespace MSTest_MoodAnalyzer
             }
 
         }
+        /* TC 5.1:- Given MoodAnalyser When Proper Return MoodAnalyser Object.
+                    - Use MoodAnalyser Factory to create a MoodAnalyser Object with Parameter constructor.
+                    - Use Equals method in MoodAnalyser to check if the two objects are equal.
+         */
+        [TestMethod]
+        public void Given_MoodAnalyzer_Using_Reflection_Return_ParameterConstructor()  //Method
+        {
+            string message = "I am in happy mood";
+            MoodAnalyzer expected = new MoodAnalyzer("I am in happy mood"); //Create object and arrange 
+            object obj = null;
+            //string actual = "";
+            // string expected = "Mood should not be empty";
+
+            try
+            {
+                MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+                obj = factory.CreateMoodAnalyzerParameterObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer", message);
+            }
+            catch (MoodAnalyzerException exception)
+            {
+
+            }
+            obj.Equals(expected);
+
+        }
+
+        /* TC 5.2:- Given Class Name When Improper Should Throw MoodAnalysisException.
+                    - To pass this test case pass wrong class name catch Exception and throw 
+                      Exception indicating No Such Class Error.
+         */
+        [TestMethod]
+        public void MoodAnalyseClass_GivenWrongClassName_ShouldReturn_NoClassException_UsingParameterizedConstrucor()
+        {
+            string expected = "Class not found";
+            object obj = null;
+            try
+            {
+                string message = "Happy";
+
+                object moodAnalyser = new MoodAnalyzer(message);
+                MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+                obj = factory.CreateMoodAnalyzerParameterObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer", message);
+                moodAnalyser.Equals(obj);
+            }
+            catch (MoodAnalyzerException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+
+        }
+
+        /* TC 5.3:- Given Class When Constructor Not Proper Should Throw MoodAnalysisException.
+                    - To pass this Test Case pass wrong Constructor parameter, catch the 
+                    Exception and throw indicating No Such Method Error.
+         */
+        [TestMethod]
+        public void MoodAnalyseClass_GivenWrongConstructorName_ShouldReturn_NoConstructorException_UsingParameterizedConstrucor()
+        {
+            string expected = "Constructor not found";
+            object obj = null;
+            try
+            {
+                string message = "Happy";
+
+                object moodAnalyser = new MoodAnalyzer(message);
+                MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+                obj = factory.CreateMoodAnalyzerParameterObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer", message);
+                moodAnalyser.Equals(obj);
+            }
+            catch (MoodAnalyzerException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+
+        }
     }
 }
