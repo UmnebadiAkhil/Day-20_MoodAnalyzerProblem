@@ -1,0 +1,15 @@
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\Mood_Analyzer_Problem.exe
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\Mood_Analyzer_Problem.deps.json
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\Mood_Analyzer_Problem.runtimeconfig.json
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\Mood_Analyzer_Problem.dll
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\ref\Mood_Analyzer_Problem.dll
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\bin\Debug\net6.0\Mood_Analyzer_Problem.pdb
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.csproj.AssemblyReference.cache
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.AssemblyInfoInputs.cache
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.AssemblyInfo.cs
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.csproj.CoreCompileInputs.cache
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.dll
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\ref\Mood_Analyzer_Problem.dll
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.pdb
+C:\Users\akhil\OneDrive\Desktop\TerminalCommands\RFP\VisualStudio\Mood_Analyzer_Problem\obj\Debug\net6.0\Mood_Analyzer_Problem.genruntimeconfig.cache

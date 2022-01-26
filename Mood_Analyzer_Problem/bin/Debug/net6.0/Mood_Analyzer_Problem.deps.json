@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Mood_Analyzer_Problem/1.0.0": {
+        "runtime": {
+          "Mood_Analyzer_Problem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mood_Analyzer_Problem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
