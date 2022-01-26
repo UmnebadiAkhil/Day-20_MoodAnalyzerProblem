@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mood_Analyzer_Problem", "Mood_Analyzer_Problem.csproj", "{3064A9BB-9280-40F4-BDA8-CEB6C60F59C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTest_MoodAnalyzer", "..\MSTest_MoodAnalyzer\MSTest_MoodAnalyzer.csproj", "{DEAE6E15-380C-4031-A7C0-1B816CE4D90D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3064A9BB-9280-40F4-BDA8-CEB6C60F59C7} = {3064A9BB-9280-40F4-BDA8-CEB6C60F59C7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

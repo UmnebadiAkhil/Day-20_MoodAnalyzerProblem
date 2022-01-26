@@ -6,28 +6,36 @@ using System.Threading.Tasks;
 
 namespace Mood_Analyzer_Problem
 {
-    /* UC1:-  Given a Message, ability to analyse and respond Happy or Sad Mood
-             - Create MoodAnalyser Object - Call analyseMood function with message as 
-             parameter and return Happy or Sad Mood.
-    */
+    /* UC2:- Given Null Mood Should Return Happy To make this Test Case pass Handle. 
+            - NULL Scenario using try catch and return Happy
+   */
     public class MoodAnalyzer
     {
-        public string message;  
+        public string message;  //instance variable      
 
-        public MoodAnalyzer(string message) 
+
+        public MoodAnalyzer(string message) //parameterized constructor for intilizing instance member
         {
             this.message = message;
-
         }
         public string Analyzer()  //Analyzer method find mood
         {
-            if (this.message.ToLower().Contains("happy"))
+            try  // Handling Exception
             {
-                return "happy";
+                if (this.message.ToLower().Contains("happy"))
+                {
+                    return "happy";
+                }
+                else
+                {
+                    return "sad";
+                }
             }
-            else
+            catch
+            //UC2 use --> //catch(NullReferenceException ex)
             {
-                return "sad";
+                //UC2 use -->// return ex.Message;
+                return "happy";
             }
         }
     }
