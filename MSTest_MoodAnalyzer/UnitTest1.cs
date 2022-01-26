@@ -52,13 +52,118 @@ namespace MSTest_MoodAnalyzer
         [TestMethod]
         public void Given_Nullmood_Expecting_happy_Result()  //Method
         {
-            MoodAnalyzer mood = new MoodAnalyzer(null); //Create object and arrange 
+            MoodAnalyzer mood = new MoodAnalyzer(null);
             string expected = "happy";
 
             string actual = mood.Analyzer();    //act
 
             Assert.AreEqual(expected, actual);  //Assert
 
+
+        }
+
+        /* TC 3.1:- NULL Given NULL Mood Should Throw MoodAnalysisException
+                    To pass this Test Case in try catch block throw MoodAnalysisException
+         */
+        [TestMethod]
+        public void Given_Nullmood_Using_CustomExpection_Return_Null()  //Method
+        {
+            MoodAnalyzer mood = new MoodAnalyzer(null); //Create object and arrange 
+            //string actual = "";
+            string actual = "";
+
+            try
+            {
+                actual = mood.Analyzer();    //act
+
+            }
+            catch (MoodAnalyzerException exception)
+            {
+                Assert.AreEqual("Mood should not be null", exception.Message);  //Assert
+            }
+        }
+
+        /* TC 3.2:- Empty Given Empty Mood Should Throw MoodAnalysisException indicating Empty Mood 
+                   - Handle Empty Mood Scenario throw MoodAnalysisException and inform user of the EmptyMood
+                   HINT: Use Enum to EMPTY or NULL
+        */
+        [TestMethod]
+        public void Given_Emptymood_Using_CustomExpection_Return_Empty()  //Method
+        {
+
+            string actual = "";
+
+            try
+            {
+                string message = string.Empty;
+                MoodAnalyzer mood = new MoodAnalyzer(message); //Create object and arrange 
+                actual = mood.Analyzer();    //act
+
+            }
+            catch (MoodAnalyzerException exception)
+            {
+                Assert.AreEqual("Mood should not be empty", exception.Message);  //Assert
+            }
+
+        }
+        /* TC 4.1:- Given MoodAnalyser Class Name Should Return MoodAnalyser Object
+                    - Create MoodAnalyser Factory to create a MoodAnalyser Object with default constructor
+                    - Use Equals method in MoodAnalyser to check if the two objects are equal.
+                    - Test passes if they are equal.
+        */
+
+        [TestMethod]
+        public void GivenMoodAnalyseClass_ShouldReturn_MoodAnalyserObject()
+        {
+            string message = null;
+            object expected = new MoodAnalyzer(message);
+            MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+            object obj = factory.CreateMoodAnalyzerObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer");
+            expected.Equals(obj);
+        }
+
+        /* TC 4.2:- Given Class Name When Improper Should Throw MoodAnalysisException
+                    - To pass this test case pass wrong class name catch Exception and throw 
+                    Exception indicating No Such Class Error.
+         */
+        [TestMethod]
+        public void MoodAnalyseClass_GivenWrongClassName_ShouldReturn_NOClassException()
+        {
+            string expected = "Class not found";
+            try
+            {
+                string message = null;
+                object moodAnalyser = new MoodAnalyzer(message);
+                MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+                object obj = factory.CreateMoodAnalyzerObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer");
+                moodAnalyser.Equals(obj);
+            }
+            catch (MoodAnalyzerException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+
+        }
+        /*TC 4.3:- Given Class When Constructor Not Proper Should Throw MoodAnalysisException.
+                  - To pass this Test Case pass wrong Constructor parameter, catch the Exception and throw indicating No 
+                   Such Method Error. 
+        */
+        [TestMethod]
+        public void MoodAnalyseClass_GivenWrongConstructorName_ShouldReturn_NoConstructorException()
+        {
+            string expected = "Constructor not found";
+            try
+            {
+                string message = null;
+                object moodAnalyser = new MoodAnalyzer(message);
+                MoodAnalyzerFactory factory = new MoodAnalyzerFactory();
+                object obj = factory.CreateMoodAnalyzerObject("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer");
+                moodAnalyser.Equals(obj);
+            }
+            catch (MoodAnalyzerException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
 
         }
     }
